@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Voice Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>VOICE BOT</h1>
+            <p class="subtitle">Voice Interface</p>
+            <!-- <div class="input-group"> -->
+                <!-- <label for="api-key" class="input-label">OpenAI API Key (stored locally)</label> -->
+                <!-- <input type="password" id="api-key" class="api-input" placeholder="sk-..." autocomplete="off"> -->
+            <!-- </div> -->
+            <div class="visualizer-container" id="visualizer">
+                <!-- 10 bars for visualization -->
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <p class="status-text" id="status">Ready to listen...</p>
+            <button id="mic-btn" class="mic-btn" aria-label="Toggle Microphone">
+                <!-- Mic Icon -->
+                <svg viewBox="0 0 24 24" id="mic-icon">
+                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                    <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                </svg>
+            </button>
+            <div class="transcript-area" id="transcript">
+                <div class="message bot-msg">Hello, I'm Aditya's voicebot. Ask me questions.</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
