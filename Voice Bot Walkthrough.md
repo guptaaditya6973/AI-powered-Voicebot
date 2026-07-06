@@ -1,116 +1,113 @@
-Voice Bot Walkthrough
+# AI-Powered Interview Voice Bot
 
-I have built an AI-powered Interview Voice Bot that enables users to conduct voice-based interview practice. The application captures spoken questions through the microphone, generates personalized responses using Generative AI (Llama 3 via Ollama), and speaks the responses back using the browser's Text-to-Speech engine.
+## Overview
 
-Features
-Voice Interaction: Uses the Web Speech API for Speech-to-Text and Text-to-Speech.
-Generative AI: Integrates with Ollama (Llama 3) to generate intelligent interview responses.
-Personalized Interview Persona: Responds as Aditya Gupta, using predefined interview answers for common HR and behavioral questions.
-Interactive UI: Displays conversation history with real-time status updates (Listening, Processing, Thinking, Ready).
-Voice Visualizer: Animated audio visualizer while the microphone is active.
-Local AI Processing: Communicates with the locally running Ollama server without requiring any cloud API key.
-How to Run
-1. Install Ollama
+The AI-Powered Interview Voice Bot is a browser-based application that simulates real interview conversations using voice interaction. It leverages **Generative AI (Llama 3 via Ollama)** to answer interview questions in real time, allowing users to practice HR and technical interviews naturally through speech.
 
-Download and install Ollama from:
+The application combines **Speech Recognition**, **Large Language Models (LLMs)**, and **Text-to-Speech** technologies to deliver an interactive interview experience without relying on cloud-based AI services.
 
-https://ollama.com
+---
 
-2. Download the Llama 3 Model
+## Features
+
+- 🎤 Voice-based interaction using the Web Speech API
+- 🤖 Generative AI powered by **Llama 3** through **Ollama**
+- 🗣️ Text-to-Speech for AI-generated responses
+- 💬 Real-time conversation transcript
+- 🎯 Personalized interview persona with predefined HR responses
+- 📊 Animated voice visualizer during speech recognition
+- 🌙 Modern responsive dark-themed interface
+- 🔒 Runs entirely on your local machine using Ollama
+
+---
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript 
+- Web Speech API
+- Ollama
+- Llama 3 (Generative AI)
+
+---
+
+## How It Works
+
+1. The user clicks the microphone button.
+2. The browser captures the user's speech using the Web Speech API.
+3. The speech is converted into text.
+4. The text is sent to the locally running Ollama server.
+5. Llama 3 generates an interview response.
+6. The response is displayed in the transcript.
+7. The browser reads the response aloud using Text-to-Speech.
+
+---
+
+## Prerequisites
+
+Before running the application, ensure you have:
+
+- Google Chrome or Microsoft Edge
+- Ollama installed
+- Llama 3 downloaded
+
+Download the model:
+
+```bash
 ollama pull llama3
-3. Start the Ollama Server
+```
+
+Start Ollama:
+
+```bash
 ollama serve
+```
 
-The application communicates with:
+---
 
-http://localhost:11434
-4. Open the Application
+## Running the Project
 
-Simply open index.html in Google Chrome or Microsoft Edge.
+1. Clone the repository.
 
-Note: No OpenAI API key is required.
+2. Open the project folder.
 
-5. Start the Conversation
-Click the microphone button.
-Allow microphone access when prompted.
-Ask your interview questions.
-Listen to the AI-generated response.
-Verification Steps
+3. Ensure Ollama is running.
 
-Perform the following tests to verify the application:
+4. Open `index.html` in your browser.
 
-Tell Me About Yourself
+5. Allow microphone access.
 
-Ask:
+6. Start asking interview questions.
 
-"Tell me about yourself."
+---
 
-Expected:
+## Sample Questions
 
-The bot introduces itself as Aditya Gupta, mentioning:
+- Tell me about yourself.
+- What are your strengths?
+- Why should we hire you?
+- Describe your internship experience.
+- What are your career goals?
+- Where do you see yourself in five years?
 
+---
+
+## Future Enhancements
+
+- Resume upload support
+- Multiple interview modes
+- Conversation history
+- Voice customization
+- Multi-language support
+- Cloud LLM integration
+- Performance analytics and feedback
+
+---
+
+## Author
+
+**Aditya Gupta**
+
+Integrated M.Tech – Mathematics and Computing  
 IIT (ISM) Dhanbad
-Mathematics and Computing
-Axtria Internship
-Lead Tracker Project
-Core Computer Science subjects
-Biggest Strength
-
-Ask:
-
-"What is your biggest strength?"
-
-Expected:
-
-The bot explains its structured problem-solving approach and analytical thinking.
-
-Areas of Improvement
-
-Ask:
-
-"Where do you want to improve?"
-
-Expected:
-
-The bot discusses improving:
-
-End-to-end system understanding
-Business storytelling
-System design skills
-Challenge Yourself
-
-Ask:
-
-"How do you push your limits?"
-
-Expected:
-
-The bot explains learning by taking ownership of challenging problems and continuously improving through iteration.
-
-Troubleshooting
-Microphone Permission
-
-Ensure microphone access is allowed in your browser settings.
-
-Ollama Not Running
-
-If the application displays:
-
-"Local AI is not running. Please start Ollama."
-
-Start the server using:
-
-ollama serve
-Llama 3 Model Missing
-
-If the model has not been downloaded, run:
-
-ollama pull llama3
-Browser Support
-
-The application is optimized for:
-
-Google Chrome
-Microsoft Edge
-
-These browsers provide the best support for the Web Speech API.
