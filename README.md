@@ -85,18 +85,9 @@ http://localhost:11434
 
 1. Clone the repository.
 
-
 2. Navigate to the project directory.
 
-```bash
-cd Interview-Voice-Bot
-```
-
 3. Start the Ollama server.
-
-```bash
-ollama serve
-```
 
 4. Open **index.html** in **Google Chrome** or **Microsoft Edge**.
 
@@ -148,6 +139,3 @@ ollama serve
 Integrated M.Tech, Mathematics and Computing  
 IIT (ISM) Dhanbad
 
----
-
-## ⭐ If you found this project useful, consider giving it a star!
