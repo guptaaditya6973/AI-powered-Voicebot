@@ -1,30 +1,116 @@
 Voice Bot Walkthrough
-I have built the "Antigravity" Voice Bot web application. This application allows you to converse with an AI agent using your voice.
+
+I have built an AI-powered Interview Voice Bot that enables users to conduct voice-based interview practice. The application captures spoken questions through the microphone, generates personalized responses using Generative AI (Llama 3 via Ollama), and speaks the responses back using the browser's Text-to-Speech engine.
 
 Features
 Voice Interaction: Uses the Web Speech API for Speech-to-Text and Text-to-Speech.
-Antigravity Persona: The bot is prompted to be a helpful, agentic coding assistant from Google Deepmind.
-Visualizer: A dynamic audio visualizer that reacts when listening.
-Secure: Your OpenAI API key is stored locally in your browser session and never sent to a backend server (other than OpenAI).
-how to Run
-Serve the files: You need to run a local web server to serve the files (Web Speech API often requires a served context, not just file://).
-If you have Python installed: python3 -m http.server
-If you have Node.js: npx http-server .
-Open in Browser: Navigate to the URL provided by the server (usually http://localhost:8000 or http://localhost:8080).
-Enter API Key: You will see an input field for your OpenAI API Key. Enter it there.
-Click Microphone: Click the large microphone button to start speaking.
-Verification Steps
-Please perform the following tests to verify the bot works as expected:
+Generative AI: Integrates with Ollama (Llama 3) to generate intelligent interview responses.
+Personalized Interview Persona: Responds as Aditya Gupta, using predefined interview answers for common HR and behavioral questions.
+Interactive UI: Displays conversation history with real-time status updates (Listening, Processing, Thinking, Ready).
+Voice Visualizer: Animated audio visualizer while the microphone is active.
+Local AI Processing: Communicates with the locally running Ollama server without requiring any cloud API key.
+How to Run
+1. Install Ollama
 
-Life Story: Ask "What is your life story in a few sentences?"
-Expected: It should mention being from Google Deepmind and working on Advanced Agentic Coding.
-Superpower: Ask "What is your #1 superpower?"
-Expected: It should mention coding capabilities and tool use.
-Misconception: Ask "What misconception do your coworkers have about you?"
-Expected: It might mention people thinking it's just a chatbot, not an agent.
-Growth: Ask "What are the top 3 areas you’d like to grow in?"
-Expected: It should give a thoughtful answer about learning new frameworks, languages, etc.
+Download and install Ollama from:
+
+https://ollama.com
+
+2. Download the Llama 3 Model
+ollama pull llama3
+3. Start the Ollama Server
+ollama serve
+
+The application communicates with:
+
+http://localhost:11434
+4. Open the Application
+
+Simply open index.html in Google Chrome or Microsoft Edge.
+
+Note: No OpenAI API key is required.
+
+5. Start the Conversation
+Click the microphone button.
+Allow microphone access when prompted.
+Ask your interview questions.
+Listen to the AI-generated response.
+Verification Steps
+
+Perform the following tests to verify the application:
+
+Tell Me About Yourself
+
+Ask:
+
+"Tell me about yourself."
+
+Expected:
+
+The bot introduces itself as Aditya Gupta, mentioning:
+
+IIT (ISM) Dhanbad
+Mathematics and Computing
+Axtria Internship
+Lead Tracker Project
+Core Computer Science subjects
+Biggest Strength
+
+Ask:
+
+"What is your biggest strength?"
+
+Expected:
+
+The bot explains its structured problem-solving approach and analytical thinking.
+
+Areas of Improvement
+
+Ask:
+
+"Where do you want to improve?"
+
+Expected:
+
+The bot discusses improving:
+
+End-to-end system understanding
+Business storytelling
+System design skills
+Challenge Yourself
+
+Ask:
+
+"How do you push your limits?"
+
+Expected:
+
+The bot explains learning by taking ownership of challenging problems and continuously improving through iteration.
+
 Troubleshooting
-Microphone Permission: Ensure you have allowed microphone access in your browser.
-API Key: Ensure your OpenAI API key is valid and has credits.
-Browser Support: This app is optimized for Google Chrome or Safari (browsers with Web Speech API support).
+Microphone Permission
+
+Ensure microphone access is allowed in your browser settings.
+
+Ollama Not Running
+
+If the application displays:
+
+"Local AI is not running. Please start Ollama."
+
+Start the server using:
+
+ollama serve
+Llama 3 Model Missing
+
+If the model has not been downloaded, run:
+
+ollama pull llama3
+Browser Support
+
+The application is optimized for:
+
+Google Chrome
+Microsoft Edge
+
+These browsers provide the best support for the Web Speech API.
